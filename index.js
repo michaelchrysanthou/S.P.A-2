@@ -1,6 +1,10 @@
+const Link = ReactRouterDOM.Link;
+
+
+
 function SPA(){
     const Route = ReactRouterDOM.Route;
-    const Link = ReactRouterDOM.Link;
+
     const HashRouter = ReactRouterDOM.HashRouter;
 
     return(
@@ -8,10 +12,7 @@ function SPA(){
         <HashRouter>
         <div>
             <h1>Routing - Hello World</h1>
-
-            <Link to="/">Home</Link> --
-            <Link to="/about/">About</Link> --
-            <Link to="/products/">Products</Link> --
+            <Nav/>
             <hr/>
             <Route  path="/" exact         component={Home}  /> 
             <Route  path="/about/"         component={About} />
@@ -26,3 +27,4 @@ ReactDOM.render(
     <SPA/>,
     document.getElementById('root')
 )
+
